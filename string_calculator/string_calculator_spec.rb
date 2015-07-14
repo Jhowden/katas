@@ -29,10 +29,6 @@ describe StringCalculator do
       expect( subject.call "//;;;\n4\n6" ).to eq 10
     end
     
-    xit "handles a delimiter of multiple different characters" do
-       expect( subject.call "//;*\n4;6*10" ).to eq 20
-    end
-    
     it "raises an error when there are negative numbers" do
       expect{ subject.call "-2, 4, -5" }.to raise_error StringCalculatorError, "Negatives not allowed - [-2, -5]"
     end
